@@ -8,6 +8,7 @@
             <td><b>Вид из окна</b></td>
             <td><b>Материал дома</b></td>
             <td><b>Тип дома</b></td>
+            <td><b>Описание</b></td>
         </tr>
     {foreach $immovables_datas as $immovables_data}
         <tr>
@@ -18,6 +19,7 @@
             <td>{$immovables_data.view_from_window}</td>
             <td>{$immovables_data.house_material}</td>
             <td>{$immovables_data.house_type}</td>
+            <td>{$immovables_data.description}</td>
         </tr>
     {/foreach}
 </table>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-02 23:19:07
+/* Smarty version 4.3.2, created on 2023-09-03 01:15:56
   from 'W:\domains\testdb-project\templates\immovables.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_64f398bb1a7123_88756552',
+  'unifunc' => 'content_64f3b41ceb4c30_16102050',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a219458fd0967bd22c414725c9d076d0e42b048' => 
     array (
       0 => 'W:\\domains\\testdb-project\\templates\\immovables.tpl',
-      1 => 1693685946,
+      1 => 1693692955,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64f398bb1a7123_88756552 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64f3b41ceb4c30_16102050 (Smarty_Internal_Template $_smarty_tpl) {
 ?><table border="1">
         <tr>
             <td><b>ID</b></td>
@@ -30,6 +30,7 @@ function content_64f398bb1a7123_88756552 (Smarty_Internal_Template $_smarty_tpl)
             <td><b>Вид из окна</b></td>
             <td><b>Материал дома</b></td>
             <td><b>Тип дома</b></td>
+            <td><b>Описание</b></td>
         </tr>
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['immovables_datas']->value, 'immovables_data');
@@ -51,6 +52,8 @@ $_smarty_tpl->tpl_vars['immovables_data']->do_else = false;
             <td><?php echo $_smarty_tpl->tpl_vars['immovables_data']->value['house_material'];?>
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['immovables_data']->value['house_type'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['immovables_data']->value['description'];?>
 </td>
         </tr>
     <?php

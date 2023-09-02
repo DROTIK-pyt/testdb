@@ -12,6 +12,7 @@
 </head>
 <body class="testdb">
     <h1>Недвижимость</h1>
+    <!-- <pre> -->
     <?php
         $smarty = new Smarty();
         $smarty->setTemplateDir('./templates/');
@@ -36,11 +37,16 @@
             $datas['house_material']   = $row['NL_MATERIAL_SHORT'];
             $datas['house_type']       = $row['NL_HOUSES_SHORT'];
 
+            $lexer = new \nadar\quill\Lexer(urldecode($row['NL_PROP_RESALE_DESCRIPTION']));
+
+            $datas['description'] = $lexer->render();
+
             $immovables_datas[] = $datas;
         }
 
         $smarty->assign('immovables_datas', $immovables_datas);
         $smarty->display('immovables.tpl');
     ?>
+    <!-- </pre> -->
 </body>
 </html>
